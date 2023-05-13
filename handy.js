@@ -1,5 +1,21 @@
-<script>
-// Define variables
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse Trail</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		// Define variables
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 var imgCount = 11; // Number of images to use
@@ -19,7 +35,7 @@ document.body.appendChild(canvas);
 
 // Load images
 for (var i = 0; i < imgCount; i++) {
-imgPaths.push("https://d2w9rnfcy7mm78.cloudfront.net/15351377/original_3280f0a20a9ec2e9ae6c0c20f45f9db5.jpg?1645926648?bc=0");
+  imgPaths.push("path/to/image_" + i + ".png");
 }
 var images = [];
 var loadedImages = 0;
@@ -76,4 +92,7 @@ function draw() {
   // Request next frame
   requestAnimationFrame(draw);
 }
-</script>
+
+	</script>
+</body>
+</html>
